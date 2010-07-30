@@ -253,7 +253,7 @@ module Technoweenie # :nodoc:
         # The pseudo hierarchy containing the file relative to the bucket name
         # Example: <tt>:table_name/:id</tt>
         def base_path(thumbnail = nil)
-          path == (thumbnail ? thumbnail_class : self).attachment_options[:path_prefix]
+          path = (thumbnail ? thumbnail_class : self).attachment_options[:path_prefix]
           File.join(path, attachment_path_id)
         end
 
